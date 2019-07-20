@@ -1,30 +1,32 @@
 .head-logo {
-  /* animation: head-logo-spin infinite 20s linear; */
-  height: 135px;
+  animation: head-logo-spin infinite 20s linear;
+  height: 120px;
   pointer-events: none;
+  margin: 15px;
+  padding: 10px;
 }
 
-/* @keyframes head-logo-spin {
+@keyframes head-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 .navbar-container {
-  padding: 10px;
-  margin: 2px;
+  padding: 0px;
+  margin: 0px;
   border: 4px double #fff;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
-  align-items: stretch;
 }
 
 .navbar-center {
+  max-width: 80vw;
   margin: 3px;
   padding: 3px;
   font-family: "Karmatic-Arcade";
@@ -37,14 +39,17 @@
 .navbar-left {
   margin: 15px;
   padding: 15px;
-  flex: 0 1 auto;
+  flex: 0 1 100%;
   align-self: center;
 }
 
 .navbar-right {
-  padding: 5px;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   align-self: center;
+  align-items: stretch;
+  height: 100%;
+  justify-content: space-around;
 }

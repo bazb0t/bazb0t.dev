@@ -6782,24 +6782,38 @@ button.close {
   }
 }
 
+.component-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  max-width: 90vw;
+  margin: 1vw;
+  padding: 1vw;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 100vw;
-  margin: 10px;
-  padding: 10px;
+  justify-content: center;
+  max-width: 90vw;
+  margin: 1vw;
+  padding: 1vw;
 }
 
-.project-img, .project-img > img {
+.project-img > img {
   display: flex;
   flex: 0 1 auto;
-  max-width: 90%;
+  min-width: 80%;
+  max-width: 80%;
   border: 2px solid black;
 
 }
 
-.feature-img, .feature-img > img {
+.feature-img {
   display: flex;
   flex: 0 1 auto;
+  max-width: 90%;
+  align-self: center;
   border: 2px solid black;
 }

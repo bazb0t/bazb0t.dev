@@ -42,3 +42,4 @@ function NavButtons() {
     </div>
   );
 }
+export default NavButtons;

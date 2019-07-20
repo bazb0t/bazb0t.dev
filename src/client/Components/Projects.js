@@ -33,63 +33,70 @@ const projects = [
     deployed: "https://just-listen.herokuapp.com",
     play: null,
     videoalt: null,
-    description:
-      "play a four-part a cappella chord in just intonation. Note: this project is being rebuilt from scratch! More available soon!",
+    description: `play a four-part a cappella chord in just intonation.
+Note: this project is being rebuilt from scratch! More available soon!`,
     devs: "Mia Baz",
-    img: "assets/Projects/02.png"
+    img: null
   }
 ];
 
 function Projects() {
   return (
-    // <div className="content-wrapper">
-    //   <header>Projects</header>
-    projects.map(project => {
-      return (
-        <div key={project.id} id="project" className="project-wrapper">
-          <h2>{project.name}</h2>
-
-          <div className="project-icons">
-            <a href={project.github}>
-              <Octicon
-                icon={getIconByName("mark-github")}
-                size="medium"
-                ariaLabel={`Github repository for ${project.name}`}
-              />
-            </a>{" "}
-            <a href={project.deployed}>
-              <Octicon
-                icon={getIconByName("globe")}
-                size="medium"
-                ariaLabel={`${project.name} deployed on the web`}
-              />
-            </a>
-            {project.play ? (
-              <a href={project.play}>
-                <Octicon
-                  icon={getIconByName("play")}
-                  size="medium"
-                  ariaLabel={project.videoalt}
-                />
-              </a>
-            ) : (
-              " "
-            )}
-            <div className="project-img">
-              <img src={project.img} alt={`${project.name}`} />
-            </div>
-            <div>
-              <p>{project.description}</p>
-              <p>
-                <b>developers: </b>
-                {project.devs}
-              </p>
+    <div className="content-wrapper">
+      <header>Projects</header>
+      <hr />
+      {projects.map(project => {
+        return (
+          <div key={project.id} id="project" className="project-wrapper">
+            <div className="project-icons" align="center">
+              <h2>
+                {project.name}{" "}
+                <a href={project.github}>
+                  <Octicon
+                    icon={getIconByName("mark-github")}
+                    size="medium"
+                    ariaLabel={`Github repository for ${project.name}`}
+                  />
+                </a>{" "}
+                <a href={project.deployed}>
+                  <Octicon
+                    icon={getIconByName("globe")}
+                    size="medium"
+                    ariaLabel={`${project.name} deployed on the web`}
+                  />
+                </a>{" "}
+                {project.play ? (
+                  <a href={project.play}>
+                    <Octicon
+                      icon={getIconByName("play")}
+                      size="medium"
+                      ariaLabel={project.videoalt}
+                    />
+                  </a>
+                ) : (
+                  " "
+                )}
+              </h2>
+              {project.img ? (
+                <div className="project-img">
+                  <img src={project.img} alt={`${project.name}`} />
+                </div>
+              ) : (
+                " "
+              )}
+              <div>
+                <p>{project.description}</p>
+                <p>
+                  <b>developers: </b>
+                  {project.devs}
+                </p>
+                <hr />
+              </div>
             </div>
           </div>
-        </div>
-      );
-    })
-    // </div>
+        );
+      })}
+    </div>
   );
 }
 
