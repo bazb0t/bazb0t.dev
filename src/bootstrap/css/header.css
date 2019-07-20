@@ -16,8 +16,7 @@
 }
 
 .navbar-container {
-  padding: 0px;
-  margin: 0px;
+  padding: 1vw;
   border: 4px double #fff;
   display: flex;
   flex-flow: row nowrap;
@@ -39,7 +38,7 @@
 .navbar-left {
   margin: 15px;
   padding: 15px;
-  flex: 0 1 100%;
+  flex: 0 1 auto;
   align-self: center;
 }
 

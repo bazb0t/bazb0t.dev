@@ -1333,7 +1333,7 @@ h6,
   font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 10 10 10px;
 }
 .lead {
   margin-bottom: 20px;
@@ -6801,6 +6801,11 @@ button.close {
   padding: 1vw;
 }
 
+.adjacent {
+  display: flex;
+  flex-direction: row;
+}
+
 .project-img > img {
   display: flex;
   flex: 0 1 auto;
@@ -6811,6 +6816,7 @@ button.close {
 }
 
 .feature-img {
+  margin: 1vw;
   display: flex;
   flex: 0 1 auto;
   max-width: 90%;

@@ -47,7 +47,7 @@ function Projects() {
       <hr />
       {projects.map(project => {
         return (
-          <div key={project.id} id="project" className="project-wrapper">
+          <div className="project-wrapper" key={project.id} id={project.id}>
             <div className="project-icons" align="center">
               <h2>
                 {project.name}{" "}
