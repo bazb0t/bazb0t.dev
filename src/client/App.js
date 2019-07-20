@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Header from "./Components/Header";
 import About from "./Components/About";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="App">
         <Header />
         <About />
+        <Projects />
       </div>
     </Router>
   );
@@ -18,13 +20,13 @@ function App() {
 
 export default App;
 
-{
-  /* <li><Link to={'/create'}>Create</Link></li>
-<li><Link to={'/index'}>List</Link></li>
-</ul>
-<hr />
-<Switch>
-  <Route exact path='/create' component={ Create } />
-  <Route path='/index' component={ Index } />
-</Switch> */
-}
+// {
+//   /* <li><Link to={'/create'}>Create</Link></li>
+// <li><Link to={'/index'}>List</Link></li>
+// </ul>
+// <hr />
+// <Switch>
+//   <Route exact path='/create' component={ Create } />
+//   <Route path='/index' component={ Index } />
+// </Switch> */
+// }
