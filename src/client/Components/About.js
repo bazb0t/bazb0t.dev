@@ -21,7 +21,7 @@ function About() {
       <div className="content-wrapper">
         <div>
           <h3>Hi! I'm Baz.</h3>
-          <div className="adjacent">
+          <div>
             <p>
               I'm a full-stack software engineer (/web developer/programmer/...)
               based in New York City. {timeAdjust()} I attended Fullstack
@@ -43,22 +43,21 @@ function About() {
               demo them as new features! In the meantime, please click the
               navbar buttons to access my Github, LinkedIn, and resume, and
               check back soon!
-              <br />
-              <ul>
-                <li>
-                  <b>Proficient</b>: JavaScript, HTML, CSS, React, Redux, Axios,
-                  Express, Node, Sequelize, PostgreSQL{" "}
-                </li>
-                <li>
-                  <b>Familiar</b>: Passport.js, React Hooks, Socket.io, OpenTok,
-                  Bulma, Bootstrap
-                </li>
-                <li>
-                  <b>Tools</b>: Git, GitHub, Heroku, Travis, Mocha, Chai,
-                  Jasmine, Visual Studio Code, Trello
-                </li>
-              </ul>
             </p>
+            <ul>
+              <li>
+                <b>Proficient</b>: JavaScript, HTML, CSS, React, Redux, Axios,
+                Express, Node, Sequelize, PostgreSQL{" "}
+              </li>
+              <li>
+                <b>Familiar</b>: Passport.js, React Hooks, Socket.io, OpenTok,
+                Bulma, Bootstrap
+              </li>
+              <li>
+                <b>Tools</b>: Git, GitHub, Heroku, Travis, Mocha, Chai, Jasmine,
+                Visual Studio Code, Trello
+              </li>
+            </ul>
             {/* <img
               src={MiaBaz}
               className="feature-img"
