@@ -1,8 +1,12 @@
-import React from "react";
-import logo from "assets/bazb0t-sm-navbar.png";
+import React from 'react';
+import logo from 'assets/bazb0t-sm-navbar.webp';
 
-function HeadLogo() {
-  return <img src={logo} alt="a bazb0t!" className="head-logo" />;
+function HeadLogo1() {
+  return <img src={logo} alt='a bazb0t!' className='head-logo1' />;
 }
 
-export default HeadLogo;
+function HeadLogo2() {
+  return <img src={logo} alt='a bazb0t!' className='head-logo2' />;
+}
+
+export { HeadLogo1, HeadLogo2 };

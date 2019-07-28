@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "bazb0t-blue-192.png",
+      "src": "bazb0t-blue-192.webp",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "bazb0t-blue-512.png",
+      "src": "bazb0t-blue-512.webp",
       "type": "image/png",
       "sizes": "512x512"
     }

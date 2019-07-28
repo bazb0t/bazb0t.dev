@@ -1,15 +1,17 @@
-import "../bootstrap/css/bootstrap.css";
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom"; //  Switch, Route, Link
+import 'scss/bazb0t.scss';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; //  Switch, Route, Link
 
-import Header from "./Components/Header";
-import About from "./Components/About";
-import Projects from "./Components/Projects";
+import Header from './Components/Header';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import NavBar from './Components/NavBar';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className='App'>
+        <NavBar />
         <Header />
         <About />
         <Projects />

@@ -1,19 +1,19 @@
-import React from "react";
-import HeadLogo from "./HeadLogo";
-import NavButtons from "./NavButtons";
-import "bootstrap/css/bootstrap.css";
-import "bootstrap/css/header.css";
+import React from 'react';
+import { HeadLogo1, HeadLogo2 } from './HeadLogo';
+// import NavBar from './NavBar';
+import 'scss/bazb0t.scss';
 
 function Header() {
   return (
-    <div className="navbar-container">
-      <div className="nav-left">
-        <HeadLogo />
+    <div className='header'>
+      <HeadLogo1 />
+      <div className='head-center'>
+        <header> welcome to bazb0t.dev!</header>
+        <h4>
+          mia andor baz, software engineer: part-b0t, all baz, full-stack!
+        </h4>
       </div>
-      <div className="navbar-center">welcome to bazb0t.dev!</div>
-      <div className="nav-right">
-        <NavButtons />
-      </div>
+      <HeadLogo2 />
     </div>
   );
 }
