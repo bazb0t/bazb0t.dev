@@ -1,0 +1,38 @@
+.DI-content {
+  grid-area: DI-content;
+  width: 100%;
+  display: grid;
+  justify-content: space-around;
+  grid-template-rows: auto;
+  @include xs {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas:
+      'DI__text'
+      'DI__col2';
+  }
+  @include sm {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas:
+      'DI__text'
+      'DI__col2';
+  }
+  @include md {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas: 'DI__text DI__col2';
+  }
+  @include lg {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas: 'DI__text DI__col2';
+  }
+  @include xl {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas: 'DI__text DI__col2';
+  }
+}
+
+.DI__text {
+  grid-area: DI__text;
+}
+.DI__col2 {
+  grid-area: DI__col2;
+}

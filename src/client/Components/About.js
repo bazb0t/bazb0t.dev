@@ -1,7 +1,8 @@
 import React from 'react';
-import 'scss/bazb0t.scss';
-import { cardback } from 'assets/assetsManifest';
+import 'scss/main.scss';
 import { MiaBaz } from 'assets/assetsManifest';
+
+import DI from './DI';
 
 function timeAdjust() {
   let year = new Date().getFullYear();
@@ -16,18 +17,19 @@ function timeAdjust() {
 
 function About() {
   return (
-    <div className=''>
-      <header>About Me</header>
-      <h3>Hi! I'm Baz.</h3>
-      <div className='component-content'>
+    <>
+    <div className='comcon'>
+      <h1>About Me</h1>
+        <center><h3>Hi! I'm Baz.</h3></center>
+      <div className='about-content'>
         <img
           src={MiaBaz}
-          className='component-content__img'
+          className='about__headshot'
           alt='headshot of Mia Andor Baz'
         />
-        <div className=''>
+        <div className='about__text'>
           <p>
-            I'm a full-stack software engineer (/web developer/programmer/...)
+            I'm a full-stack software engineer (/web developer/programmer/code whisperer/...)
             based in New York City. {timeAdjust()} I attended Fullstack Academy
             of Code as a recipient of the NYC Tech Talent Pipeline's Web
             Development Fellowship, completing their Software Engineering
@@ -61,52 +63,12 @@ function About() {
             </li>
           </ul>
         </div>
-        <h3>A Note on Identity</h3>
-        <p>
-          It's 2019, and as I am the master of my own domain -- literally -- I'd
-          like to take this opportunity to share something about myself:
-        </p>
-        <center>
-          <h4>
-            <b>
-              I am transgender-nonbinary, and my pronouns are they/them/theirs.
-            </b>
-          </h4>
-        </center>
-        <p>
-          It's important to me that I put this out there early: for starters,
-          there's a distinct lack of diversity in tech -- nonbinary folks are
-          especially underrepresented, as one can easily assume by attempting to
-          Google statistics on how many nonbinary people there are in the
-          country, let alone in this industry.
-        </p>
-        <p>
-          Further, I strive to be as open as I can be with my identity and lived
-          experiences because that is a luxury not everyone like me can
-          afford...yet. I've seen firsthand the effect my authenticity has in
-          making this world a more inclusive and supportive place, and while
-          it's going to be a long time coming, that future can only be secured
-          by the work we do today.
-        </p>
-
-        <p>
-          You can help! If you haven't seen it, this is the back of my business
-          card:
-        </p>
-        <img
-          src={cardback}
-          alt='back of business card describing they/them/their(s) pronoun usage and tips to be inclusive'
-          width='500px'
-          className='feature-img'
-        />
-        <p>
-          It bears repeating, so, look: you're going to slip up and use the
-          wrong pronouns. Mistakes happen all the time. Just say whatever it was
-          again with the right pronoun and move on -- I'm <em>way</em> more
-          interested in what you were actually trying to say!
-        </p>
-      </div>
     </div>
+    </div>
+    <div>
+<DI />      
+    </div>
+    </>
   );
 }
 

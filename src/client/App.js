@@ -1,22 +1,23 @@
-import 'scss/bazb0t.scss';
+import 'scss/main.scss';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; //  Switch, Route, Link
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './Components/Header';
 import About from './Components/About';
 import Projects from './Components/Projects';
-import NavBar from './Components/NavBar';
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <NavBar />
         <Header />
-        <About />
-        <Projects />
+        <Switch>
+        <Route exact path="/" component={About} />
+        <Route path="/about" component={About} />
+        <Route path="/projects" component={Projects} />
+        </Switch>
       </div>
-    </Router>
+   </Router>
   );
 }
 

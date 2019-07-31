@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from 'assets/bazb0t-sm-navbar.webp';
-
+import {logo} from 'assets/assetsManifest'
 function HeadLogo1() {
   return <img src={logo} alt='a bazb0t!' className='head-logo1' />;
 }

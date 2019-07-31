@@ -1,7 +1,7 @@
 import React from 'react';
 import Octicon, { getIconByName } from '@primer/octicons-react';
-import { Projects01, Projects03 } from 'assets/assetsManifest';
-import 'scss/bazb0t.scss';
+import { Projects01, Projects03, Projects04 } from 'assets/assetsManifest';
+import 'scss/main.scss';
 
 const projects = [
   {
@@ -38,65 +38,89 @@ const projects = [
 Note: this project is being rebuilt from scratch! More available soon!`,
     devs: 'Mia Baz',
     img: null
-  }
+  },
+  {
+    id: 4,
+    name: 'bazb0t.dev',
+    github: 'https://github.com/bazb0t/bazb0t',
+    deployed: 'https:/bazb0t.dev',
+    play: null,
+    videoalt: null,
+    description: `You're on it! I added this site to my projects as it's meant to be a playground for new skills and features. This most recent update includes responsive CSS grid with flexbox, and I'm particularly excited about how the retro game cartridges turned out!`,
+    devs: `Mia Baz`,
+    img: Projects04,
+  },
 ];
 
 function Projects() {
   return (
-    <div className='content-wrapper'>
-      <header>Projects</header>
+    <div className='comcon'>
+      <h1>Projects</h1>
+      <div className="project-wrapper">
       {projects.map((project, i, arr) => {
         return (
-          <div className='project-wrapper' key={project.id} id={project.id}>
-            <div className='project-icons' align='center'>
-              <h2>
-                {project.name}{' '}
-                <a href={project.github}>
-                  <Octicon
-                    icon={getIconByName('mark-github')}
-                    size='medium'
-                    ariaLabel={`Github repository for ${project.name}`}
-                  />
-                </a>{' '}
-                <a href={project.deployed}>
-                  <Octicon
-                    icon={getIconByName('globe')}
-                    size='medium'
-                    ariaLabel={`${project.name} deployed on the web`}
-                  />
-                </a>{' '}
-                {project.play ? (
-                  <a href={project.play}>
-                    <Octicon
-                      icon={getIconByName('play')}
-                      size='medium'
-                      ariaLabel={project.videoalt}
-                    />
-                  </a>
+          <div key={project.id} id={project.id}>
+            <div className="project-flex-wrapper">
+            {/* cartridge card for Game Boy effect */}
+            <div className='projectCartridge'>
+              {/* title w/ wrapper */}
+              <div className='projectCartridge projectCartridge__title--wrapper'>
+                <div className='projectCartridge projectCartridge__title'>
+                  {project.name}
+                </div>
+              </div>
+              {project.img ? (
+                <img className='projectCartridge__img' src={project.img} alt={`${project.name}`} />
                 ) : (
                   ' '
-                )}
-              </h2>
-              {project.img ? (
-                <div className='project-img'>
-                  <img src={project.img} alt={`${project.name}`} />
-                </div>
+                  )}
+                <Octicon
+                  className='Octicon-gameboy'
+                  icon={getIconByName('triangle-down')}
+                  ariaLabel='triangle-down'
+                  size='medium'
+                  />
+            </div>
+            {/* out of cartridge! info/public artifacts: */}
+            <div className='project-info'>
+                <p>{project.description}</p>
+                <p><strong>developers: </strong>
+            {project.devs}</p>
+            <div className='project-content__icons'>
+              <a href={project.github}>
+                <Octicon
+                  icon={getIconByName('mark-github')}
+                  ariaLabel={`Github repository for ${project.name}`}
+                  size='medium'
+                  />
+              </a>{' '}
+              <a href={project.deployed}>
+                <Octicon
+                  icon={getIconByName('globe')}
+                  ariaLabel={`${project.name} deployed on the web`}
+                  size='medium'
+                  />
+              </a>{' '}
+              {project.play ? (
+                <a href={project.play}>
+                  <Octicon
+                    icon={getIconByName('play')}
+                    ariaLabel={project.videoalt}
+                    size='medium'
+                    />
+                </a>
               ) : (
                 ' '
-              )}
-              <div>
-                <p>{project.description}</p>
-                <p>
-                  <b>developers: </b>
-                  {project.devs}
-                </p>
-                {i !== arr.length - 1 ? <hr /> : <></>}
-              </div>
+                )}
+                </div>{/*end project icons div */}
+            </div> {/*end project info div */}
             </div>
+            {i !== arr.length - 1 ? <hr /> : <></>}
           </div>
         );
       })}
-    </div>
+      </div>
+      </div>
   );
 }
 
