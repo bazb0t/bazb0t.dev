@@ -104,7 +104,16 @@
     background-color: #8E828C;
     border: 5px solid #7E727C;
     margin: 2rem;
-    width: 80%;
+    width: 100%;
+    @include md {
+      width: 80%;
+    }
+    @include lg {
+      width: 80%;
+    }
+    @include xl {
+      width: 80%;
+    }
   }
 }
 .Octicon-gameboy {
