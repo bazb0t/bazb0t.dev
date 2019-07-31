@@ -11,6 +11,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # [START app_yaml]
-env: flex
-runtime: nodejs
+# env: flex // NO FLEX NO FLEX NO FLEX.
+runtime: nodejs10
 # [END app_yaml]
