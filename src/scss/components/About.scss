@@ -1,0 +1,43 @@
+.about-content {
+  grid-area: about-content;
+  width: 100%;
+  display: grid;
+  justify-content: space-around;
+  grid-template-rows: auto;
+  @include xs {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas:
+      'about__headshot'
+      'about__text';
+  }
+  @include sm {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas:
+      'about__headshot'
+      'about__text';
+  }
+  @include md {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas:
+      'about__headshot about__text';
+  }
+  @include lg {
+    padding: 4rem;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas:
+      'about__headshot about__text';
+  }
+  @include xl {
+    padding: 0rem;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-areas:
+      'about__headshot about__text';
+  }
+}
+
+.about__headshot {
+  grid-area: about__headshot;
+}
+.about__text {
+  grid-area: about__text;
+}

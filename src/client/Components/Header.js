@@ -1,52 +1,31 @@
-import React from "react";
-import HeadLogo from "./HeadLogo";
-import { Button } from "react-bootstrap";
-import resume from "assets/Mia.Baz.pdf";
-import "bootstrap/css/bootstrap.css";
-import "bootstrap/css/header.css";
+import React from 'react';
+import {
+  HeadLogo1
+  // HeadLogo2
+} from './HeadLogo';
+import NavBar from './NavBar';
+import 'scss/main.scss';
 
 function Header() {
   return (
-    <div className="navbar-container">
-      <div className="navbar-left">
-        <HeadLogo />
+    <header className='header'>
+      <NavBar />
+      <HeadLogo1 className='head-logo1' />
+      <div className='header__title'>
+        <span>
+          welcome to &nbsp;
+        </span>
+        baz
+        <br />
+        b0t.
+        <br />
+        dev
       </div>
-      <div className="navbar-center">welcome to bazb0t.dev!</div>
-      <div className="navbar-right">
-        <Button
-          variant="primary"
-          size="lg"
-          href="https://github.com/bazb0t"
-          target="_blank"
-          rel="noopener noreferrer"
-          value="github"
-        >
-          github
-        </Button>
-
-        <Button
-          variant="primary"
-          size="lg"
-          href="https://linkedin.com/in/miabaz"
-          target="_blank"
-          rel="noopener noreferrer"
-          value="linkedIn"
-        >
-          linkedIn
-        </Button>
-
-        <Button
-          variant="primary"
-          size="lg"
-          href={resume}
-          target="_blank"
-          rel="noopener noreferrer"
-          value="resume"
-        >
-          resume
-        </Button>
+      <div className='header__subtitle'>
+        mia andor baz, software engineer:
+        <br /> part-b0t, all baz, full-stack!
       </div>
-    </div>
+    </header>
   );
 }
 
