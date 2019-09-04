@@ -36,15 +36,13 @@
   
 }
 .projectCartridge {
-  max-width: 45vw;
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  justify-items: center;
-  justify-content: flex-start;
-  align-self: center;
+  // justify-self: center;
+  // justify-items: center;
+  // align-self: center;
   align-items: center;
-  align-content: center; 
+  // align-content: center; 
   grid-area: projectCartridge;
   background-color: #8E828C;
   border-radius: 3px;
@@ -52,18 +50,14 @@
   margin: 2rem;
   @include xs {
     width: 100%;
+    max-width: 80vw;
   }
   @include sm {
     width: 100%;
   }
   @include md {
     width: 100%;
-  }
-  @include lg {
-    width: 100%;
-  }
-  @include xl {
-    width: 100%;
+    max-width: 45vw;
   }
   
   &__title {
@@ -82,7 +76,6 @@
     margin:0px;
     &--wrapper {
       display: flex;
-      justify-content: flex-start;
       position: absolute;
       margin: 0px;
       padding: 0px;
@@ -103,7 +96,7 @@
     border-radius: 5px;
     background-color: #8E828C;
     border: 5px solid #7E727C;
-    margin: 2rem;
+    margin: 2.5rem;
     width: 100%;
     @include md {
       width: 80%;
